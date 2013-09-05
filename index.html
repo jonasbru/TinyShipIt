@@ -1,0 +1,35 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+
+<body style="background: none repeat scroll 0% 0% black; text-align: center;">
+	<div id="plop" >
+		<h1 style="color: white; font-size: 30px; margin-top: 50px;">Tiny Ship-it</h1>
+
+		<div id="CLICK ME" style="color:white; font-size: 100px;">Click Me !</div>
+
+		<div id="countResults" style="color: red; font-size: 30px; margin-top: 50px;">- 0 -</div>
+	</div>
+
+	<div id="caca" style="display:none;">
+		<img src="http://s3.amazonaws.com/rapgenius/nigel-thornberry-rickroll.gif"/>
+	</div>
+
+	<script type="text/javascript">
+		var count = 0;
+
+		$("#plop").click(function() {
+			count++;
+			$("#countResults").html("- " + count + " -");
+			$("#plop").hide();
+			$("#caca").show();
+
+			window.setTimeout(function() {
+				$("#caca").hide();
+				$("#plop").show();
+			}, 7000);
+		});
+	</script>
+</body>
+</html>
